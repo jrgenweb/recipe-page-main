@@ -12,190 +12,197 @@
 ### Primary
 */
 :root {
-  --clr-nutmeg: hsl(14, 45%, 36%);
-  --clr-dark-raspberry: hsl(332, 51%, 32%);
-  --clr-white: hsl(0, 0%, 100%);
-  --clr-rose-white: hsl(330, 100%, 98%);
-  --clr-eggshell: hsl(30, 54%, 90%);
-  --clr-light-grey: hsl(30, 18%, 87%);
-  --clr-wenge-brown: hsl(30, 10%, 34%);
-  --clr-dark-charcoal: hsl(24, 5%, 18%);
+  /* primary colors */
+  --clr-primary: hsl(14, 45%, 36%);
+  --clr-secondary: hsl(332, 51%, 32%);
+  /* neutral colors */
+  --clr-neutral-white: hsl(0, 0%, 100%);
+  --clr-neutral-rose-white: hsl(330, 100%, 98%);
+  --clr-neutral-eggshell: hsl(30, 54%, 90%);
+  --clr-neutral-light-grey: hsl(30, 18%, 87%);
+  --clr-neutral-wenge-brown: hsl(30, 10%, 34%);
+  --clr-neutral-dark-charcoal: hsl(24, 5%, 18%);
   --spacing-l: 3.2rem;
   --spacing-m: calc(var(--spacing-l) * 0.875);
   --spacing-s: calc(var(--spacing-l) * 0.75);
 }
 
-/* for margin and padding*/
+/* font weights */
+/* typography*/
+p, body {
+  font-size: 1rem;
+  line-height: 150%;
+  font-weight: 400;
+}
+
+dl dd, ol li::before {
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 150%;
+}
+
+h1 {
+  font-size: 2.25rem;
+  line-height: 1;
+  font-family: "Young Serif";
+  font-weight: 400;
+}
+
+h2 {
+  font-size: 1.75rem;
+  line-height: 1;
+  font-weight: 400;
+  font-family: "Young Serif";
+}
+
+.overline {
+  font-weight: 600;
+  font-size: 1.25rem;
+}
+
+html {
+  box-sizing: border-box;
+}
+
 *,
 *::before,
 *::after {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-}
-
-html {
-  font-size: 10px;
+  box-sizing: inherit;
 }
 
 body {
-  font-size: 1.6rem;
-  background-color: var(--clr-eggshell);
-  color: var(--clr-wenge-brown);
-  font-weight: 400;
+  background-color: var(--clr-neutral-eggshell);
+  color: var(--clr-neutral-wenge-brown);
   font-family: "Outfit";
 }
 
-@media (min-width: 600px) {
-  :root {
-    --spacing-l: 4rem;
-    --spacing-m: calc(var(--spacing-l) * 0.8);
-    --spacing-s: calc(var(--spacing-l) * 0.7);
-  }
-  main {
-    max-width: 73.6rem;
-    border-radius: 2.4rem;
-  }
-  body {
-    display: grid;
-    place-content: center;
-    margin: 12.3rem 0;
-  }
-  main figure {
-    max-width: calc(100% - var(--spacing-l) * 2);
-    margin: var(--spacing-l) var(--spacing-l) 0 var(--spacing-l);
-  }
-  main figure img {
-    border-radius: 1.2rem;
-    -o-object-fit: contain;
-       object-fit: contain;
-    max-width: 100%;
-  }
-  h1 {
-    font-size: 4rem;
-  }
+/*typography*/
+h1 {
+  color: var(--clr-neutral-dark-charcoal);
 }
-main {
-  background-color: var(--clr-white);
+
+h2 {
+  color: var(--clr-primary);
+  margin: 2rem 0 1.5rem 0;
 }
-main figure {
+
+p {
+  margin: 1.5rem 0;
+}
+
+.overline {
+  color: var(--clr-secondary);
+  margin: 0 0 0.75rem 0;
+}
+
+.recipe_page {
+  background-color: var(--clr-neutral-white);
+}
+.recipe_page img {
   width: 100%;
 }
-main figure img {
-  max-width: 100%;
+.recipe_page_content {
+  padding: 2rem;
 }
-main h1 {
-  font-size: 3.6rem;
-  font-family: "Young Serif";
-  font-weight: 400;
-  padding-top: 0;
-  padding-bottom: var(--spacing-s);
-  color: var(--clr-dark-charcoal);
+.recipe_page_preparation {
+  background-color: var(--clr-neutral-rose-white);
+  padding: 1.5rem;
+  border-radius: 0.75rem;
 }
-main h1 + p {
-  line-height: 150%;
+
+ul,
+ol {
+  padding-left: 2.5rem;
+  list-style: none;
 }
-main article {
-  padding: 0 var(--spacing-l) var(--spacing-l) var(--spacing-l);
-}
-main article section:first-child {
-  margin-top: 4rem;
-}
-main article section:first-child p {
-  line-height: 150%;
-}
-main article .preparation {
-  background-color: var(--clr-rose-white);
-  padding: var(--spacing-m);
-  margin-top: var(--spacing-m);
-  border-radius: 1.2rem;
-}
-main article .preparation h3 {
-  font-family: "Outfit";
-  color: var(--clr-dark-raspberry);
-  font-size: 2rem;
-}
-main article .preparation ul {
-  margin-top: 1.6rem;
-}
-main article .ingredients {
-  margin-top: var(--spacing-m);
-}
-main article .nutrition p {
-  margin: var(--spacing-s) 0;
-}
-main article .nutrition dl {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-}
-main article .nutrition dt:not(:last-of-type),
-main article .nutrition dd:not(:last-of-type) {
-  border-bottom: 0.2rem solid var(--clr-light-grey);
-}
-main article .nutrition dt,
-main article .nutrition dd {
-  padding: 1.5rem var(--spacing-m);
-}
-main article .nutrition dd {
-  color: var(--clr-nutmeg);
-  font-weight: 700;
-}
-main h2 {
-  font-size: 2.8rem;
-  color: var(--clr-nutmeg);
-  font-family: "Young Serif";
-  font-weight: 400;
-}
-main ul li,
-main ol li {
-  padding: 0.5rem 0;
-  line-height: 150%;
-}
-main ul li span,
-main ol li span {
-  font-weight: bold;
-}
-main ul,
-main ol {
-  margin-top: var(--spacing-s);
-}
-main ul {
-  list-style-type: none;
-  padding-left: 4rem;
-}
-main ul li {
+ul li,
+ol li {
+  line-height: 1.5;
   position: relative;
 }
-main ul li::before {
+ul li span,
+ol li span {
+  font-weight: 700;
+}
+ul li:not(:first-child),
+ol li:not(:first-child) {
+  padding-top: 0.5rem;
+}
+
+ul li::before {
   content: "";
-  background-color: var(--clr-dark-raspberry);
-  width: 0.4rem;
+  width: 0.25rem;
   aspect-ratio: 1;
   border-radius: 50%;
+  background-color: var(--clr-primary);
   position: absolute;
-  left: -3rem;
-  margin-top: 1rem;
-  margin-right: 30px;
-  font-size: 1rem;
-  vertical-align: middle;
+  left: -1.95rem;
+  top: 50%;
 }
-main ol {
-  counter-reset: item;
-  list-style-type: none;
+
+ol {
+  list-style: none;
+  counter-reset: count;
 }
-main ol li {
-  position: relative;
-  margin-left: 4rem;
+ol li {
+  counter-increment: count;
 }
-main ol li::before {
-  content: counter(item) ".";
-  counter-increment: item;
-  color: var(--clr-nutmeg);
+ol li::before {
+  content: counter(count) ".";
+  position: absolute;
+  left: -2rem;
+  color: var(--clr-secondary);
   font-weight: 700;
-  position: absolute;
-  left: -3rem;
 }
-main hr {
-  border: 0.1rem solid var(--clr-light-grey);
-  margin: var(--spacing-m) 0;
+
+hr {
+  margin: 2rem 0;
+}
+
+dl {
+  padding: 0 2rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  row-gap: 1.5rem;
+}
+dl dd {
+  padding-left: 0.5rem;
+  color: var(--clr-primary);
+}
+
+/*600px*/
+@media (min-width: 37.5rem) {
+  .recipe_page {
+    max-width: 736px;
+    margin: 0 auto;
+    border-radius: 0.75rem;
+  }
+  main {
+    width: 100%;
+    padding: 7.6875rem 0;
+  }
+  figure {
+    padding: 2.5rem 2.5rem 0rem 2.5rem;
+  }
+  h1 {
+    font-size: 2.5rem;
+    padding-top: 0;
+  }
+  img {
+    max-width: 656px;
+    border-radius: 0.75rem;
+  }
+  dl {
+    row-gap: 0.65rem;
+  }
+  dt,
+  dd {
+    padding-bottom: 0.75rem;
+  }
+  dl dt,
+  dl dd {
+    border-bottom: 1px solid var(--clr-neutral-light-grey);
+  }
 }/*# sourceMappingURL=style.css.map */
