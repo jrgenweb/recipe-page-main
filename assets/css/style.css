@@ -22,9 +22,7 @@
   --clr-neutral-light-grey: hsl(30, 18%, 87%);
   --clr-neutral-wenge-brown: hsl(30, 10%, 34%);
   --clr-neutral-dark-charcoal: hsl(24, 5%, 18%);
-  --spacing-l: 3.2rem;
-  --spacing-m: calc(var(--spacing-l) * 0.875);
-  --spacing-s: calc(var(--spacing-l) * 0.75);
+  --clr-neutral-white-coffee: hsl(30, 18%, 87%);
 }
 
 /* font weights */
@@ -158,18 +156,33 @@ ol li::before {
 }
 
 hr {
+  border: 1px solid var(--clr-neutral-white-coffee);
   margin: 2rem 0;
 }
 
 dl {
-  padding: 0 2rem;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  row-gap: 1.5rem;
+}
+dl dd {
+  color: var(--clr-primary);
+}
+dl dt,
+dl dd {
+  padding: 0.75rem 2rem;
+  border-bottom: 1px solid var(--clr-neutral-white-coffee);
 }
 dl dd {
   padding-left: 0.5rem;
-  color: var(--clr-primary);
+}
+dl dt:first-of-type,
+dl dd:first-of-type {
+  padding-top: 0;
+}
+dl dt:last-of-type,
+dl dd:last-of-type {
+  border: 0;
+  padding-bottom: 0;
 }
 
 /*600px*/
@@ -184,7 +197,7 @@ dl dd {
     padding: 7.6875rem 0;
   }
   .recipe_page figure {
-    padding: 2.5rem 2.5rem 0rem 2.5rem;
+    padding: 2.5rem 2.5rem 0 2.5rem;
   }
   .recipe_page_content {
     padding: 2.5rem;
@@ -197,15 +210,9 @@ dl dd {
     max-width: 656px;
     border-radius: 0.75rem;
   }
-  dl {
-    row-gap: 0.65rem;
-  }
-  dt,
-  dd {
-    padding-bottom: 0.75rem;
-  }
   dl dt,
   dl dd {
-    border-bottom: 1px solid var(--clr-neutral-light-grey);
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid var(--clr-neutral-white-coffee);
   }
 }/*# sourceMappingURL=style.css.map */
