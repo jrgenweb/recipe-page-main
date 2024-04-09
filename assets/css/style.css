@@ -183,8 +183,11 @@ dl dd {
     width: 100%;
     padding: 7.6875rem 0;
   }
-  figure {
+  .recipe_page figure {
     padding: 2.5rem 2.5rem 0rem 2.5rem;
+  }
+  .recipe_page_content {
+    padding: 2.5rem;
   }
   h1 {
     font-size: 2.5rem;
