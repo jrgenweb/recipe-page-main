@@ -177,7 +177,7 @@ dl dd {
   .recipe_page {
     max-width: 736px;
     margin: 0 auto;
-    border-radius: 0.75rem;
+    border-radius: 1.5rem;
   }
   main {
     width: 100%;
